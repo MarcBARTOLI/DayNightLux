@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DayNightLux.Views.DayPage">
+    <VerticalStackLayout>
+
+        <Image
+            Margin="0,72"
+            Source="sun_color"
+            HeightRequest="120"
+            HorizontalOptions="Center" />
+
+        <VerticalStackLayout
+            Spacing="12"
+            VerticalOptions="Center">
+
+            <Label 
+                Text="Start of the day"
+                VerticalOptions="Center" 
+                FontSize="24"
+                HorizontalOptions="Center" />
+
+            <TimePicker
+                Time="{Binding DayStartTime}"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center"/>
+
+        </VerticalStackLayout>
+
+        <VerticalStackLayout
+            Spacing="12"
+            Margin="0,24"
+            Padding="72,0"
+            VerticalOptions="Center">
+
+            <Label 
+                Text="Brightness"
+                VerticalOptions="Center" 
+                FontSize="24"
+                HorizontalOptions="Center" />
+
+            <Slider
+                Value="{Binding DayBrightness}"
+                Maximum="100"
+                VerticalOptions="Center"/>
+
+        </VerticalStackLayout>
+
+    </VerticalStackLayout>
+</ContentPage>
